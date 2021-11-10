@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "a76496d5-0148-4add-8a5c-a3836e844d85",
+		"name": "RiseUpLab",
+		"description": "#Coding Challange Project For RiseUpLabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User & Admin Registration",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jhon@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "",
+							"description": "Default role is \"user\". For Admin type role value is \"admin\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "gmfaruk2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Posts ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": "Post list for both admin and user"
+			},
+			"response": []
+		},
+		{
+			"name": "Posts Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Single Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWY2YjE2NTEwODE5YmMyZmQyZWQ3ZTYyY2RiNzQ1OWFiNzI5ODI4OWIyYTY1MTBiNzk3MTllYmRmYzlhZjk0NTk1OTJiYWY4NmQ5NWQ1M2UiLCJpYXQiOjE2MzY1MzM3MzEuMjg5NjgzLCJuYmYiOjE2MzY1MzM3MzEuMjg5Njk0LCJleHAiOjE2NjgwNjk3MzEuMjE1MDUyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.I78XIISZDZVVU9nXNAL3fw68RH9YxJya9rTKmia-Wve7pTqvNQfQARIpjeSh9WAR9xcT-aZJRc4xwwogGUkCNSxy8YifmW-yGa0jDuB7T-HlJiPB8-p31cLLOtbObFzDyBuJjNp-YzG4Dh8bEuFkkkNOGb_vI5oe_KpS39Pr3Yz4Lo8e4sNVmvGj9pGQn23C_SJ7zCF7AaX_w8JM3TPLKqcSNWZ31O6ws0FPb9ecLpqm20zt83Te5rhfQqcjtxajZRCGnJ7fkvL4fNP5MtZ3G1JEwADq7K5azPTw9LzqQ0QFRNA0WwCv2AIapdutKexJKL_fzsx2tgMunGT-v6N_G0NDj2LLqzwh3u6TMu8YUrh22vy8x6b23HEMNOr-siy9JvXnIWj-0ME5YiSsNm4z3QTzttpwMO365XZMsbM9dveG0D7-952WtHHZm6Xby2Edc_3PPo565En3ZBHjVsXw5osSx4JeK3DO5CzYmZsHnbEti2irDo46QESwoX-4Jov0sydBfUpOFIJ0eK2dUezsBPNOvmtmhUmAbrJfy3HLCU9WPe_RlQPtmZa1yaphtT1TPRw9xtPKkOXCPSgDD_tw6WCNHGEny2tGyEIZPIjZeZGHSmBjvJUbMd0ok4Dj_kuOuRM4OIyDglki4Zd8mE2CqypxErQ8fjToE2X-ey9-QMY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWY2YjE2NTEwODE5YmMyZmQyZWQ3ZTYyY2RiNzQ1OWFiNzI5ODI4OWIyYTY1MTBiNzk3MTllYmRmYzlhZjk0NTk1OTJiYWY4NmQ5NWQ1M2UiLCJpYXQiOjE2MzY1MzM3MzEuMjg5NjgzLCJuYmYiOjE2MzY1MzM3MzEuMjg5Njk0LCJleHAiOjE2NjgwNjk3MzEuMjE1MDUyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.I78XIISZDZVVU9nXNAL3fw68RH9YxJya9rTKmia-Wve7pTqvNQfQARIpjeSh9WAR9xcT-aZJRc4xwwogGUkCNSxy8YifmW-yGa0jDuB7T-HlJiPB8-p31cLLOtbObFzDyBuJjNp-YzG4Dh8bEuFkkkNOGb_vI5oe_KpS39Pr3Yz4Lo8e4sNVmvGj9pGQn23C_SJ7zCF7AaX_w8JM3TPLKqcSNWZ31O6ws0FPb9ecLpqm20zt83Te5rhfQqcjtxajZRCGnJ7fkvL4fNP5MtZ3G1JEwADq7K5azPTw9LzqQ0QFRNA0WwCv2AIapdutKexJKL_fzsx2tgMunGT-v6N_G0NDj2LLqzwh3u6TMu8YUrh22vy8x6b23HEMNOr-siy9JvXnIWj-0ME5YiSsNm4z3QTzttpwMO365XZMsbM9dveG0D7-952WtHHZm6Xby2Edc_3PPo565En3ZBHjVsXw5osSx4JeK3DO5CzYmZsHnbEti2irDo46QESwoX-4Jov0sydBfUpOFIJ0eK2dUezsBPNOvmtmhUmAbrJfy3HLCU9WPe_RlQPtmZa1yaphtT1TPRw9xtPKkOXCPSgDD_tw6WCNHGEny2tGyEIZPIjZeZGHSmBjvJUbMd0ok4Dj_kuOuRM4OIyDglki4Zd8mE2CqypxErQ8fjToE2X-ey9-QMY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current User Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTUzNTdkY2RhMjBkOGNhM2M4MjQ5ZTVlM2ZkZTk3Njg4MjIzMDJkYjIxZTczMmNjOTZhYjMzYTMxOTVhNDM5YWJhM2ViNGRjNTM1OTJhYjIiLCJpYXQiOjE2MzY1MzgwMjEuMjU2MzE3LCJuYmYiOjE2MzY1MzgwMjEuMjU2Mzg2LCJleHAiOjE2NjgwNzQwMjEuMTkyMTA2LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.jk0d1xYgXzAG3XrpANB5V3PomMZ8uXDvhxWvBe6wJU3XwqId9FcYia8tehWwD6JfSskX5ek8a2JhFNBe5_xT44mPopTSRHth3HRg_GHc1RrZb_0Idx_TH2LlwwgnBu9Lc5PSGYrrV7Uio0qKIwctEutkzj-BTStWHxaKx047BX5rPAvm66PRorwMIfkytjPWHvJPCvOqTQNcF18Az2flAC7EkyzaYHGq3q08tynTUCtXmChuJTEvx5e_t9T1760CV8Aeov9fnX1FWEiC8ywBLPhn2w137u2sx5ssQVp9m9-75G5tkG_XHztlxSoaxjPDRqZ6TNzXvw1lUhec3GLr8gHzNVjobDqeBYcp2Y2P5ZCwgX7f4paXDTqq6amJrN4VlQc2NRRM_BVawmfzSUbFef_IaI7GrIT5PCYFcN3sdTnuf7pCjAP1DOOcPS1gTUGVUltYUR75aZSBePueG9YgFxGR8H8HecmdxI5lUzUt3pPabbNCEjZNEhgBOFx4z51nOQXUwEyQDS1wipwWBIYYGpbpAOuFGIOdmpZN2xr8JsYbp41Z-Jbq1dkz_y139wXunXd2_dNYnR6fsQv7mBOZ1_9w343tltd5tRKwlT6KsREuD7z8xVM6bz1sXlRgMuCmdOpHTINuuT5nn52KDM4TCuCa4RnTpL7W96g9CVojFm0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

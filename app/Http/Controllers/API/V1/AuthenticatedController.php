@@ -40,9 +40,7 @@ class AuthenticatedController extends Controller
             $user = User::create($input);
             if($user) {
                $response['name'] =  $user->name;
-               $response['token'] =  $user->createToken('RiseUpLabsApps')->accessToken;
                $response['message'] = 'Registration Successfull';
-
                //Commit Data
                DB::commit();
             }
