@@ -27,10 +27,10 @@ credentials.
 	User, Logout.**
 
 ## User Schema:
-    - **name**
-	- **email**
-	- **password**
-	- **role**
+- name
+- email
+- password
+- role
 
 ## Post Schema:
 	- **title**
