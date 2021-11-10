@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\API\V1\AuthenticatedController;
 use App\Http\Controllers\API\V1\PostsController;
 /*
@@ -22,7 +21,6 @@ Route::post('login', [AuthenticatedController::class, 'login']);
 Route::post('register', [AuthenticatedController::class, 'register']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    Log::debug('User:' . serialize($request->user()));
     return $request->user();
 });
 
