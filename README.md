@@ -4,27 +4,27 @@
 ## Assignment (PHP Laravel) 
 
 ## Objective: 
--Let say we are going to create a backend service (Rest APIs) for a job portal. The
+- Let say we are going to create a backend service (Rest APIs) for a job portal. The
 application will have two types of users. Admin and the general user. Admin can create, view,
 single view, update and delete job posts. General users can view job posts after login with valid
 credentials.
 
 ## Language and Framework:
-	- **Laravel 8 or Lumen 8**
+- Laravel 8 or Lumen 8
 
 ## Project Type: 
-	- **Backend Service (REST APIs)**
+- Backend Service (REST APIs)
 
 ## Public Access: 
-	- **Registration (General users)**
-	- **Login.**
+- Registration (General users)
+- Login.
 
 ## General User Access: 
-	- **View the job post as the list and single, Logout.**
+- View the job post as the list and single, Logout.
 
 ## Admin User Access: 
-	- **Create, list view, single view, update and delete job posts, Create Admin
-	User, Logout.**
+- Create, list view, single view, update and delete job posts, Create Admin
+	User, Logout.
 
 ## User Schema:
 - name
@@ -33,11 +33,11 @@ credentials.
 - role
 
 ## Post Schema:
-	- **title**
-	- **description**
-	- **users_id**
-	- **thumbnail**
-	- **status**
+- title
+- description
+- users_id
+- thumbnail
+- status
 
 ## Installation Guideline 
 - Create a database locally named `homestead` utf8_general_ci 
